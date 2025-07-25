@@ -1,2 +1,21 @@
-Name	Age
-Alice	30
+PRD_ID	Title	Category	Status	Priority	Author	Team	Created_Date	Last_Modified	Estimated_Effort	Completion_Percentage	Target_Date	Tags
+PRD-2025-0001	User Authentication System	Feature	Implemented	High	John Doe	Engineering Team	2025-01-15	2025-06-20	120	100	2025-06-30	authentication,security,login,oauth
+PRD-2025-0002	Dark Mode Theme Implementation	Enhancement	Testing	Medium	Jane Smith	UX Team	2025-02-01	2025-07-15	80	85	2025-07-30	ui,theme,accessibility,frontend
+PRD-2025-0003	Payment Gateway Integration	Feature	In Development	Critical	Mike Johnson	Backend Team	2025-02-10	2025-07-20	200	60	2025-08-15	payment,integration,stripe,security
+PRD-2025-0004	Mobile App Redesign	New Product	Approved	High	Sarah Wilson	Design Team	2025-02-15	2025-07-18	300	40	2025-09-30	mobile,design,ui,ux,redesign
+PRD-2025-0005	Bug Fix: Login Validation	Bug Fix	Implemented	High	Tom Brown	QA Team	2025-03-01	2025-03-15	16	100	2025-03-20	bugfix,validation,frontend,forms
+PRD-2025-0006	Real-time Notifications	Feature	In Review	Medium	Lisa Davis	Full Stack Team	2025-03-10	2025-07-22	150	25	2025-08-30	notifications,realtime,websockets
+PRD-2025-0007	API Rate Limiting	Enhancement	Approved	Medium	David Lee	Backend Team	2025-03-15	2025-07-10	60	70	2025-08-01	api,security,performance,backend
+PRD-2025-0008	User Profile Dashboard	Feature	Draft	Low	Emily Chen	Frontend Team	2025-03-20	2025-07-23	90	15	2025-09-15	dashboard,profile,analytics,frontend
+PRD-2025-0009	Database Performance Optimization	Enhancement	In Development	High	Robert Taylor	Database Team	2025-03-25	2025-07-21	180	50	2025-08-20	database,performance,optimization,backend
+PRD-2025-0010	Multi-language Support	Feature	In Review	Medium	Anna Garcia	Localization Team	2025-04-01	2025-07-19	250	30	2025-10-01	i18n,localization,frontend,accessibility
+PRD-2025-0011	Advanced Search Functionality	Feature	Approved	Medium	Chris Martinez	Search Team	2025-04-05	2025-07-12	140	80	2025-08-25	search,elasticsearch,performance,frontend
+PRD-2025-0012	Security Audit Implementation	Enhancement	Testing	Critical	Jessica Rodriguez	Security Team	2025-04-10	2025-07-16	100	90	2025-07-31	security,audit,compliance,monitoring
+PRD-2025-0013	Export Data Feature	Feature	Implemented	Low	Kevin White	Data Team	2025-04-15	2025-06-25	70	100	2025-07-15	export,data,csv,json,reports
+PRD-2025-0014	Social Media Integration	Enhancement	Draft	Low	Michelle Thompson	Marketing Team	2025-04-20	2025-07-24	110	10	2025-09-30	social,integration,marketing,sharing
+PRD-2025-0015	Automated Testing Suite	Enhancement	In Development	High	Daniel Lewis	QA Team	2025-04-25	2025-07-17	160	65	2025-08-31	testing,automation,ci,quality
+PRD-2025-0016	Cloud Storage Integration	Feature	In Review	Medium	Ashley Walker	Infrastructure Team	2025-05-01	2025-07-14	190	35	2025-09-01	cloud,storage,aws,s3,infrastructure
+PRD-2025-0017	Performance Monitoring Dashboard	Feature	Approved	High	Brian Hall	DevOps Team	2025-05-05	2025-07-11	130	75	2025-08-10	monitoring,dashboard,metrics,devops
+PRD-2025-0018	Email Template System	Enhancement	Testing	Medium	Stephanie Allen	Communications Team	2025-05-10	2025-07-13	85	95	2025-08-05	email,templates,communication,marketing
+PRD-2025-0019	Mobile Push Notifications	Feature	In Development	Medium	Gregory Young	Mobile Team	2025-05-15	2025-07-25	120	45	2025-08-28	mobile,notifications,push,engagement
+PRD-2025-0020	Advanced Analytics Platform	New Product	Draft	High	Nicole King	Analytics Team	2025-05-20	2025-07-25	400	20	2025-11-15	analytics,data,machine-learning,insights

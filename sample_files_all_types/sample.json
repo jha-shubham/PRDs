@@ -1,1 +1,127 @@
-{"name": "John", "age": 30}
+{
+  "name": "John",
+  "age": 30,
+  "prd_management_system": {
+    "version": "1.2.0",
+    "description": "Comprehensive PRD management configuration",
+    "author": "PRD Documentation Team",
+    "last_updated": "2025-07-25",
+    "configuration": {
+      "default_status": "Draft",
+      "allowed_statuses": [
+        "Draft",
+        "In Review", 
+        "Approved",
+        "Implemented",
+        "Archived"
+      ],
+      "categories": [
+        {
+          "id": "feature",
+          "name": "Feature",
+          "description": "New functionality or capabilities",
+          "color": "#4CAF50"
+        },
+        {
+          "id": "enhancement", 
+          "name": "Enhancement",
+          "description": "Improvements to existing features",
+          "color": "#2196F3"
+        },
+        {
+          "id": "bug_fix",
+          "name": "Bug Fix", 
+          "description": "Fixes for identified issues",
+          "color": "#F44336"
+        },
+        {
+          "id": "new_product",
+          "name": "New Product",
+          "description": "Entirely new product development",
+          "color": "#9C27B0"
+        }
+      ],
+      "priority_levels": {
+        "1": {
+          "name": "High",
+          "color": "#FF5722",
+          "description": "Critical priority requiring immediate attention"
+        },
+        "2": {
+          "name": "Medium", 
+          "color": "#FF9800",
+          "description": "Standard priority for regular development cycle"
+        },
+        "3": {
+          "name": "Low",
+          "color": "#4CAF50", 
+          "description": "Low priority for future consideration"
+        }
+      },
+      "workflow": {
+        "draft_to_review": {
+          "required_fields": ["title", "description", "author", "category"],
+          "approvers": ["team_lead", "product_manager"]
+        },
+        "review_to_approved": {
+          "required_approvals": 2,
+          "required_fields": ["acceptance_criteria", "technical_specification"]
+        },
+        "approved_to_implemented": {
+          "required_fields": ["implementation_notes", "test_results"],
+          "sign_off_required": true
+        }
+      }
+    },
+    "templates": {
+      "feature_prd": {
+        "sections": [
+          "Executive Summary",
+          "Problem Statement", 
+          "Solution Overview",
+          "User Stories",
+          "Acceptance Criteria",
+          "Technical Requirements",
+          "UI/UX Specifications",
+          "Testing Strategy",
+          "Implementation Timeline",
+          "Success Metrics"
+        ]
+      },
+      "enhancement_prd": {
+        "sections": [
+          "Current State Analysis",
+          "Proposed Changes",
+          "Impact Assessment", 
+          "Implementation Plan",
+          "Testing Requirements",
+          "Rollback Strategy"
+        ]
+      }
+    },
+    "integrations": {
+      "jira": {
+        "enabled": true,
+        "auto_create_tickets": true,
+        "project_key": "PRD"
+      },
+      "confluence": {
+        "enabled": true,
+        "space_key": "PRODUCTS",
+        "auto_publish": false
+      },
+      "slack": {
+        "enabled": true,
+        "notification_channel": "#product-updates",
+        "status_change_alerts": true
+      }
+    },
+    "metrics": {
+      "track_velocity": true,
+      "track_approval_time": true,
+      "track_implementation_time": true,
+      "generate_reports": true,
+      "report_frequency": "weekly"
+    }
+  }
+}

@@ -1,3 +1,21 @@
-id,name,value
-1,Alice,100
-2,Bob,200
+id,name,value,category,status,priority,created_date,last_modified,author,estimated_effort,completion_percentage
+1,Alice,100,Feature,Draft,High,2025-07-01,2025-07-15,Product Team,8,0
+2,Bob,200,Enhancement,In Review,Medium,2025-07-02,2025-07-16,UX Team,5,25
+3,Charlie,150,Bug Fix,Approved,Critical,2025-07-03,2025-07-17,QA Team,3,75
+4,Diana,300,New Product,In Development,High,2025-07-04,2025-07-18,Dev Team,21,40
+5,Eve,175,Feature,Testing,Medium,2025-07-05,2025-07-19,Product Team,13,90
+6,Frank,225,Enhancement,Implemented,Low,2025-07-06,2025-07-20,Design Team,8,100
+7,Grace,180,Bug Fix,Draft,High,2025-07-07,2025-07-21,QA Team,2,0
+8,Henry,320,Feature,In Review,Critical,2025-07-08,2025-07-22,Engineering Team,15,10
+9,Ivy,140,Enhancement,Approved,Medium,2025-07-09,2025-07-23,UX Team,6,60
+10,Jack,280,New Product,In Development,High,2025-07-10,2025-07-24,Product Team,34,30
+11,Karen,195,Feature,Testing,Medium,2025-07-11,2025-07-25,Dev Team,10,85
+12,Leo,160,Bug Fix,Implemented,Low,2025-07-12,2025-07-25,QA Team,4,100
+13,Maya,250,Enhancement,Draft,High,2025-07-13,2025-07-25,Design Team,12,0
+14,Nick,190,Feature,In Review,Medium,2025-07-14,2025-07-25,Engineering Team,9,15
+15,Olivia,220,New Product,Approved,Critical,2025-07-15,2025-07-25,Product Team,28,5
+16,Paul,170,Bug Fix,In Development,High,2025-07-16,2025-07-25,QA Team,3,50
+17,Quinn,290,Enhancement,Testing,Medium,2025-07-17,2025-07-25,UX Team,11,80
+18,Rachel,205,Feature,Implemented,Low,2025-07-18,2025-07-25,Dev Team,7,100
+19,Sam,165,Bug Fix,Draft,Medium,2025-07-19,2025-07-25,QA Team,2,0
+20,Tina,310,New Product,In Review,High,2025-07-20,2025-07-25,Product Team,25,20

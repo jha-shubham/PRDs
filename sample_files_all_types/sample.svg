@@ -1,1 +1,106 @@
-<svg height='100' width='100'><circle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' /></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PRD Management System Logo and Icons -->
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <!-- Gradient definitions for modern look -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8BC34A;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropshadow" x="0" y="0" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Main logo container -->
+  <g transform="translate(50, 50)">
+    <!-- Document icon base -->
+    <rect x="0" y="0" width="80" height="100" fill="url(#primaryGradient)" rx="5" ry="5" filter="url(#dropshadow)"/>
+    
+    <!-- Document fold -->
+    <polygon points="65,0 80,15 65,15" fill="#5a67d8"/>
+    
+    <!-- Document lines representing content -->
+    <rect x="10" y="25" width="50" height="3" fill="white" opacity="0.8" rx="1"/>
+    <rect x="10" y="35" width="45" height="3" fill="white" opacity="0.8" rx="1"/>
+    <rect x="10" y="45" width="55" height="3" fill="white" opacity="0.8" rx="1"/>
+    <rect x="10" y="55" width="40" height="3" fill="white" opacity="0.8" rx="1"/>
+    <rect x="10" y="65" width="50" height="3" fill="white" opacity="0.8" rx="1"/>
+    <rect x="10" y="75" width="35" height="3" fill="white" opacity="0.8" rx="1"/>
+    
+    <!-- Checkmark overlay indicating approval/completion -->
+    <circle cx="65" cy="75" r="12" fill="url(#accentGradient)" filter="url(#dropshadow)"/>
+    <path d="M60 75 L64 79 L70 69" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Status indicators -->
+  <g transform="translate(150, 60)">
+    <!-- Draft status -->
+    <circle cx="0" cy="0" r="8" fill="#FFC107"/>
+    <text x="15" y="5" font-family="Arial, sans-serif" font-size="12" fill="#333">Draft</text>
+    
+    <!-- In Review status -->
+    <circle cx="0" cy="25" r="8" fill="#17A2B8"/>
+    <text x="15" y="30" font-family="Arial, sans-serif" font-size="12" fill="#333">In Review</text>
+    
+    <!-- Approved status -->
+    <circle cx="0" cy="50" r="8" fill="#28A745"/>
+    <text x="15" y="55" font-family="Arial, sans-serif" font-size="12" fill="#333">Approved</text>
+    
+    <!-- Implemented status -->
+    <circle cx="0" cy="75" r="8" fill="#6F42C1"/>
+    <text x="15" y="80" font-family="Arial, sans-serif" font-size="12" fill="#333">Implemented</text>
+  </g>
+  
+  <!-- Progress bar visualization -->
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="200" height="20" fill="#e9ecef" rx="10" ry="10"/>
+    <rect x="0" y="0" width="140" height="20" fill="url(#accentGradient)" rx="10" ry="10"/>
+    <text x="100" y="14" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">70% Complete</text>
+  </g>
+  
+  <!-- Flow diagram showing PRD workflow -->
+  <g transform="translate(50, 220)">
+    <!-- Workflow boxes -->
+    <rect x="0" y="0" width="50" height="30" fill="#FFC107" rx="5" opacity="0.8"/>
+    <text x="25" y="18" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#000">Draft</text>
+    
+    <rect x="70" y="0" width="50" height="30" fill="#17A2B8" rx="5" opacity="0.8"/>
+    <text x="95" y="18" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Review</text>
+    
+    <rect x="140" y="0" width="50" height="30" fill="#28A745" rx="5" opacity="0.8"/>
+    <text x="165" y="18" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Approved</text>
+    
+    <rect x="210" y="0" width="50" height="30" fill="#6F42C1" rx="5" opacity="0.8"/>
+    <text x="235" y="18" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Done</text>
+    
+    <!-- Arrows between workflow stages -->
+    <path d="M55 15 L65 15" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M125 15 L135 15" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M195 15 L205 15" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- System title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">PRD Management</text>
+  <text x="200" y="60" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#666">System Dashboard</text>
+  
+  <!-- Version info -->
+  <text x="350" y="290" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">v1.2.0</text>
+</svg>

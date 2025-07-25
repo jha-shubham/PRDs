@@ -1,1 +1,297 @@
-{key: 'value', /* comment */}
+{
+  // PRD Management System Configuration (JSON5 format)
+  // Version: 1.2.0 | Last Updated: July 25, 2025
+  // JSON5 allows comments and more flexible syntax
+  
+  system: {
+    name: "PRD Management System",
+    version: "1.2.0",
+    environment: "production", // development, staging, production
+    debug: false,
+    
+    // Feature flags with comments
+    features: {
+      advancedAnalytics: true,      // Enable advanced reporting and analytics
+      aiSuggestions: false,         // AI-powered PRD suggestions (beta)
+      realTimeCollaboration: true,  // Real-time editing and comments
+      mobileApp: true,              // Mobile application support
+      darkMode: true,               // Dark theme support
+      apiV2: false,                 // Next generation API (experimental)
+    }
+  },
+  
+  // Database configuration with multiple environments
+  database: {
+    primary: {
+      host: "localhost",
+      port: 5432,
+      name: "prd_management",
+      user: "prd_user",
+      // Password should be loaded from environment variables
+      ssl: true,
+      poolSize: 20,
+      timeout: 30000, // 30 seconds
+    },
+    
+    redis: {
+      host: "localhost", 
+      port: 6379,
+      database: 0,
+      ttl: 3600, // 1 hour default cache TTL
+    }
+  },
+  
+  // API configuration
+  api: {
+    baseUrl: "https://api.prd-management.com",
+    version: "v1",
+    rateLimit: {
+      requests: 1000,
+      window: 3600, // 1 hour window
+    },
+    cors: {
+      origins: [
+        "https://prd.company.com",
+        "https://app.company.com",
+        // Add more allowed origins here
+      ],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+      allowedHeaders: ["Authorization", "Content-Type", "X-API-Key"],
+    }
+  },
+  
+  // Authentication and security
+  auth: {
+    providers: {
+      google: {
+        enabled: true,
+        clientId: "your-google-client-id",
+        // clientSecret loaded from environment
+        scopes: ["openid", "email", "profile"],
+      },
+      github: {
+        enabled: false,
+        clientId: "your-github-client-id",
+      },
+      azure: {
+        enabled: false,
+        tenantId: "your-azure-tenant-id",
+        clientId: "your-azure-client-id",
+      }
+    },
+    
+    jwt: {
+      algorithm: "HS256",
+      expiresIn: "24h",
+      refreshExpiresIn: "7d",
+      issuer: "prd-management-system",
+    },
+    
+    security: {
+      passwordPolicy: {
+        minLength: 8,
+        requireUppercase: true,
+        requireLowercase: true,
+        requireNumbers: true,
+        requireSpecialChars: true,
+      },
+      maxLoginAttempts: 5,
+      lockoutDuration: 900, // 15 minutes
+      enable2FA: true,
+    }
+  },
+  
+  // Integration configurations
+  integrations: {
+    jira: {
+      enabled: true,
+      serverUrl: "https://company.atlassian.net",
+      projectKey: "PRD",
+      autoCreateIssues: true,
+      statusSync: true,
+      // API token loaded from environment
+      issueTypes: {
+        feature: "Story",
+        enhancement: "Improvement", 
+        bugFix: "Bug",
+        newProduct: "Epic",
+      }
+    },
+    
+    confluence: {
+      enabled: true,
+      spaceKey: "PRODUCTS",
+      autoPublish: false,
+      templatePageId: "123456789",
+    },
+    
+    slack: {
+      enabled: true,
+      channels: {
+        notifications: "#product-updates",
+        alerts: "#prd-alerts",
+        digest: "#daily-digest",
+      },
+      notifications: {
+        statusChanges: true,
+        newComments: true,
+        approvals: true,
+        dailyDigest: true,
+        digestTime: "09:00", // 9 AM UTC
+      }
+    },
+    
+    email: {
+      enabled: true,
+      provider: "smtp", // smtp, sendgrid, ses
+      smtp: {
+        host: "smtp.company.com",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+          user: "prd-system@company.com",
+          // pass loaded from environment
+        }
+      },
+      from: {
+        name: "PRD Management System",
+        address: "prd-system@company.com",
+      },
+      templates: {
+        welcome: "welcome-template",
+        statusChange: "status-change-template",
+        approval: "approval-request-template",
+        digest: "daily-digest-template",
+      }
+    }
+  },
+  
+  // Workflow configuration
+  workflow: {
+    defaultStatus: "draft",
+    statuses: [
+      { id: "draft", name: "Draft", color: "#FFC107", initial: true },
+      { id: "in_review", name: "In Review", color: "#17A2B8" },
+      { id: "approved", name: "Approved", color: "#28A745" },
+      { id: "in_development", name: "In Development", color: "#6F42C1" },
+      { id: "testing", name: "Testing", color: "#FD7E14" },
+      { id: "implemented", name: "Implemented", color: "#20C997", final: true },
+      { id: "archived", name: "Archived", color: "#6C757D", final: true },
+    ],
+    
+    // Status transition rules
+    transitions: {
+      draft: ["in_review", "archived"],
+      in_review: ["approved", "draft"],
+      approved: ["in_development", "in_review"],
+      in_development: ["testing", "approved"],
+      testing: ["implemented", "in_development"],
+      implemented: ["archived"],
+      // archived has no transitions (final state)
+    },
+    
+    approvals: {
+      required: {
+        feature: 2,        // Features require 2 approvals
+        enhancement: 1,    // Enhancements require 1 approval
+        bugFix: 0,        // Bug fixes don't require approval
+        newProduct: 3,     // New products require 3 approvals
+      },
+      roles: ["product_manager", "tech_lead", "stakeholder"],
+    }
+  },
+  
+  // UI/UX settings
+  ui: {
+    theme: {
+      default: "light",
+      available: ["light", "dark", "auto"],
+    },
+    
+    pagination: {
+      defaultPageSize: 25,
+      maxPageSize: 100,
+      pageSizeOptions: [10, 25, 50, 100],
+    },
+    
+    uploads: {
+      maxFileSize: 10485760, // 10MB in bytes
+      allowedTypes: [
+        "application/pdf",
+        "image/jpeg", 
+        "image/png",
+        "image/gif",
+        "text/plain",
+        "text/markdown",
+        // Add more MIME types as needed
+      ],
+      maxFilesPerPRD: 20,
+    },
+    
+    editor: {
+      autoSave: true,
+      autoSaveInterval: 30000, // 30 seconds
+      enableMarkdown: true,
+      enableCodeHighlighting: true,
+      spellCheck: true,
+    }
+  },
+  
+  // Monitoring and logging
+  monitoring: {
+    enabled: true,
+    healthCheck: {
+      endpoint: "/health",
+      interval: 60000, // 1 minute
+    },
+    
+    metrics: {
+      prometheus: {
+        enabled: true,
+        endpoint: "/metrics",
+      },
+      customMetrics: [
+        "prd_creation_rate",
+        "approval_time_avg",
+        "completion_rate",
+        "user_activity",
+      ]
+    },
+    
+    logging: {
+      level: "info", // error, warn, info, debug
+      format: "json",
+      destinations: ["console", "file"],
+      rotation: {
+        enabled: true,
+        maxSize: "100MB",
+        maxFiles: 10,
+      }
+    }
+  },
+  
+  // Performance and caching
+  performance: {
+    caching: {
+      enabled: true,
+      strategy: "redis", // memory, redis, hybrid
+      ttl: {
+        prds: 3600,        // 1 hour
+        users: 1800,       // 30 minutes  
+        statistics: 300,   // 5 minutes
+      }
+    },
+    
+    compression: {
+      enabled: true,
+      algorithm: "gzip",
+      threshold: 1024, // Compress responses larger than 1KB
+    },
+    
+    cdn: {
+      enabled: false,
+      baseUrl: "https://cdn.company.com",
+      assets: ["images", "stylesheets", "scripts"],
+    }
+  }
+}

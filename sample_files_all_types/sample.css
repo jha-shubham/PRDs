@@ -1,1 +1,346 @@
-body { background-color: #fafafa; }
+/* PRD Management System Stylesheet */
+/* Version: 1.2.0 | Last Updated: July 25, 2025 */
+
+body { 
+    background-color: #fafafa; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Layout and Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.header p {
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+/* Card and Component Styles */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #667eea;
+    font-weight: 500;
+}
+
+/* PRD Status Indicators */
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.status-draft { 
+    background-color: #ffc107; 
+}
+
+.status-review { 
+    background-color: #17a2b8; 
+}
+
+.status-approved { 
+    background-color: #28a745; 
+}
+
+.status-implemented { 
+    background-color: #6f42c1; 
+}
+
+.status-archived {
+    background-color: #6c757d;
+}
+
+/* Priority Indicators */
+.priority-high {
+    border-left: 4px solid #dc3545;
+}
+
+.priority-medium {
+    border-left: 4px solid #ffc107;
+}
+
+.priority-low {
+    border-left: 4px solid #28a745;
+}
+
+/* PRD List Styles */
+.prd-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prd-item {
+    padding: 15px;
+    margin: 8px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: all 0.2s ease;
+}
+
+.prd-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+.prd-item strong {
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+
+.prd-item small {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+/* Grid Layouts */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+/* Statistics Boxes */
+.stat-box {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: scale(1.05);
+}
+
+.stat-number {
+    font-size: 2.2em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Button Styles */
+.btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+    background: #28a745;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.btn-info {
+    background: #17a2b8;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Progress Bars */
+.progress {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    height: 100%;
+    transition: width 0.6s ease;
+}
+
+/* Alerts and Notifications */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px 20px;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header {
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.p-10 { padding: 10px; }
+.p-20 { padding: 20px; }

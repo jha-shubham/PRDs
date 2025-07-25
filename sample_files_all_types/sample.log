@@ -1,2 +1,92 @@
-INFO: Process started
-ERROR: Something failed
+2025-07-25 09:00:01.123 [INFO] PRDManagementSystem - System startup initiated
+2025-07-25 09:00:01.145 [INFO] DatabaseConnection - Connecting to PostgreSQL database at localhost:5432
+2025-07-25 09:00:01.267 [INFO] DatabaseConnection - Database connection established successfully
+2025-07-25 09:00:01.289 [INFO] RedisCache - Connecting to Redis cache at localhost:6379
+2025-07-25 09:00:01.301 [INFO] RedisCache - Redis connection established, cache ready
+2025-07-25 09:00:01.334 [INFO] AuthenticationService - OAuth2 provider configured: google
+2025-07-25 09:00:01.356 [INFO] AuthenticationService - JWT token service initialized
+2025-07-25 09:00:01.378 [INFO] IntegrationManager - Loading integration configurations
+2025-07-25 09:00:01.401 [INFO] JiraIntegration - Jira integration enabled, connecting to https://company.atlassian.net
+2025-07-25 09:00:01.523 [INFO] JiraIntegration - Jira connection successful, project key: PRD
+2025-07-25 09:00:01.545 [INFO] SlackIntegration - Slack integration enabled, webhook configured
+2025-07-25 09:00:01.567 [INFO] EmailService - SMTP service configured at smtp.company.com:587
+2025-07-25 09:00:01.589 [INFO] PRDManagementSystem - All systems initialized successfully
+2025-07-25 09:00:01.612 [INFO] WebServer - Starting web server on port 8080
+2025-07-25 09:00:01.734 [INFO] WebServer - Web server started successfully, listening on http://localhost:8080
+
+2025-07-25 09:15:23.456 [INFO] UserController - User login attempt: john.doe@company.com
+2025-07-25 09:15:23.478 [INFO] AuthenticationService - OAuth2 authentication successful for user: john.doe@company.com
+2025-07-25 09:15:23.501 [INFO] SessionManager - New session created for user: john.doe@company.com, session_id: sess_abc123def456
+2025-07-25 09:15:23.523 [INFO] UserController - User logged in successfully: john.doe@company.com
+
+2025-07-25 09:18:45.789 [INFO] PRDController - Creating new PRD: "User Profile Enhancement"
+2025-07-25 09:18:45.812 [INFO] PRDService - PRD validation passed for: "User Profile Enhancement"
+2025-07-25 09:18:45.834 [INFO] DatabaseService - Inserting new PRD record: PRD-2025-0234
+2025-07-25 09:18:45.856 [INFO] NotificationService - Sending creation notification for PRD-2025-0234
+2025-07-25 09:18:45.878 [INFO] SlackIntegration - Notification sent to #product-updates channel
+2025-07-25 09:18:45.901 [INFO] PRDController - PRD created successfully: PRD-2025-0234
+
+2025-07-25 09:22:12.345 [INFO] PRDController - Status update request for PRD-2025-0234: draft -> in_review
+2025-07-25 09:22:12.367 [INFO] WorkflowEngine - Validating status transition: draft -> in_review
+2025-07-25 09:22:12.389 [INFO] WorkflowEngine - Required fields validation passed
+2025-07-25 09:22:12.412 [INFO] PRDService - Status updated for PRD-2025-0234: in_review
+2025-07-25 09:22:12.434 [INFO] NotificationService - Status change notification sent to stakeholders
+2025-07-25 09:22:12.456 [INFO] JiraIntegration - Creating Jira ticket for PRD-2025-0234
+2025-07-25 09:22:12.578 [INFO] JiraIntegration - Jira ticket created: PROD-1234 linked to PRD-2025-0234
+
+2025-07-25 09:35:01.123 [WARN] RateLimiter - API rate limit approaching for user: api_user_456 (850/1000 requests)
+2025-07-25 09:35:15.789 [INFO] PRDController - Bulk PRD export requested by: admin@company.com
+2025-07-25 09:35:15.812 [INFO] ExportService - Generating JSON export for 156 PRDs
+2025-07-25 09:35:16.234 [INFO] ExportService - Export completed: prd_export_20250725_093516.json (2.3MB)
+
+2025-07-25 09:42:33.567 [ERROR] DatabaseConnection - Connection timeout while executing query: SELECT * FROM prds WHERE...
+2025-07-25 09:42:33.589 [WARN] DatabaseConnection - Retrying database connection (attempt 1/3)
+2025-07-25 09:42:34.012 [INFO] DatabaseConnection - Database connection restored successfully
+2025-07-25 09:42:34.034 [INFO] HealthChecker - Database health check passed
+
+2025-07-25 09:48:07.890 [INFO] CommentController - New comment added to PRD-2025-0234 by: jane.smith@company.com
+2025-07-25 09:48:07.912 [INFO] NotificationService - Comment notification sent to PRD author and watchers
+2025-07-25 09:48:07.934 [INFO] EmailService - Email notification queued for: john.doe@company.com
+
+2025-07-25 09:55:18.456 [INFO] ScheduledTasks - Running daily cleanup job
+2025-07-25 09:55:18.478 [INFO] ScheduledTasks - Cleaned up 23 expired sessions
+2025-07-25 09:55:18.501 [INFO] ScheduledTasks - Archived 5 old PRDs (older than 2 years)
+2025-07-25 09:55:18.523 [INFO] ScheduledTasks - Cache cleanup completed, freed 128MB
+2025-07-25 09:55:18.545 [INFO] ScheduledTasks - Daily cleanup job completed successfully
+
+2025-07-25 10:00:01.000 [INFO] ReportGenerator - Generating hourly metrics report
+2025-07-25 10:00:01.123 [INFO] AnalyticsService - Processing PRD metrics for dashboard
+2025-07-25 10:00:01.234 [INFO] AnalyticsService - Calculated velocity metrics: avg_completion_time=14.5 days
+2025-07-25 10:00:01.345 [INFO] DashboardService - Dashboard data refreshed for all users
+2025-07-25 10:00:01.456 [INFO] ReportGenerator - Hourly report completed and cached
+
+2025-07-25 10:12:45.678 [WARN] SecurityService - Multiple failed login attempts detected for IP: 192.168.1.100
+2025-07-25 10:12:45.701 [INFO] SecurityService - IP address temporarily blocked: 192.168.1.100 (duration: 15 minutes)
+2025-07-25 10:12:45.723 [INFO] AlertManager - Security alert sent to administrators
+
+2025-07-25 10:18:33.789 [INFO] PRDController - PRD approval request: PRD-2025-0234 -> approved
+2025-07-25 10:18:33.812 [INFO] ApprovalService - Approval granted by: manager@company.com (2/2 required approvals)
+2025-07-25 10:18:33.834 [INFO] WorkflowEngine - Auto-transitioning PRD-2025-0234 to approved status
+2025-07-25 10:18:33.856 [INFO] NotificationService - Approval notification sent to development team
+2025-07-25 10:18:33.878 [INFO] JiraIntegration - Jira ticket PROD-1234 status updated to "Ready for Development"
+
+2025-07-25 10:25:07.123 [INFO] BackupService - Starting scheduled database backup
+2025-07-25 10:25:07.145 [INFO] BackupService - Creating snapshot of prd_management database
+2025-07-25 10:25:18.567 [INFO] BackupService - Backup completed: prd_backup_20250725_102518.sql.gz (45.2MB)
+2025-07-25 10:25:18.589 [INFO] BackupService - Backup uploaded to AWS S3: s3://company-backups/prd-management/
+2025-07-25 10:25:18.612 [INFO] BackupService - Old backups cleaned up, retained last 30 days
+
+2025-07-25 10:30:45.234 [ERROR] FileUploadService - File upload failed: filename="large_spec.pdf", size=15MB, error="File size exceeds limit"
+2025-07-25 10:30:45.256 [WARN] FileUploadService - Upload rejected for user: designer@company.com, max_size=10MB
+2025-07-25 10:30:45.278 [INFO] ValidationService - File upload validation failed, user notified
+
+2025-07-25 10:35:12.890 [INFO] IntegrationService - Syncing data with external systems
+2025-07-25 10:35:12.912 [INFO] ConfluenceIntegration - Publishing 3 approved PRDs to Confluence
+2025-07-25 10:35:14.234 [INFO] ConfluenceIntegration - Page created: "PRD-2025-0234 - User Profile Enhancement"
+2025-07-25 10:35:14.256 [INFO] SlackIntegration - Daily digest prepared for #product-updates
+2025-07-25 10:35:14.278 [INFO] IntegrationService - All integrations synchronized successfully
+
+2025-07-25 10:40:00.000 [INFO] PerformanceMonitor - System performance metrics collected
+2025-07-25 10:40:00.023 [INFO] PerformanceMonitor - CPU usage: 23%, Memory: 1.2GB/4GB, Active users: 45
+2025-07-25 10:40:00.045 [INFO] PerformanceMonitor - Database connections: 12/20, Response time: 145ms avg
+2025-07-25 10:40:00.067 [INFO] MetricsCollector - Metrics exported to Prometheus endpoint
