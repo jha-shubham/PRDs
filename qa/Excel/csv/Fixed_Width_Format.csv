@@ -1,0 +1,11 @@
+Actor                   Event      Activity                                 Project                  Module               Date                  Entity_Key
+john.doe@example.com    Create     Test Case TC-001 created                QMetry Project Alpha     Test Management      2024-09-10 09:12:27   TC-001    
+jane.smith@example.com  Update     Test Suite TS-005 updated               QMetry Project Beta      Test Planning        2024-09-10 10:15:33   TS-005    
+mike.johnson@example.co Delete     Requirement REQ-123 deleted             QMetry Project Gamma     Requirements         2024-09-10 11:22:41   REQ-123   
+sarah.wilson@example.co Archive    Test Execution TX-789 archived          QMetry Project Alpha     Test Execution       2024-09-10 12:30:15   TX-789    
+david.brown@example.com Clone      Test Case TC-002 cloned from TC-001     QMetry Project Delta     Test Management      2024-09-10 13:45:22   TC-002    
+lisa.garcia@example.com Move       Defect DEF-456 moved to different proj  QMetry Project Beta      Defect Management    2024-09-10 14:18:50   DEF-456   
+robert.taylor@example.c Copy       Test Plan TP-100 copied                 QMetry Project Epsilon   Test Planning        2024-09-10 15:33:12   TP-100    
+emily.davis@example.com Add        User added to project                   QMetry Project Alpha     User Management      2024-09-10 16:27:35   USR-101   
+michael.white@example.c Remove     Test Step removed from TC-003           QMetry Project Gamma     Test Management      2024-09-10 17:41:08   TS-003    
+anna.lee@example.com    Unarchive  Test Execution TX-890 unarchived        QMetry Project Beta      Test Execution       2024-09-10 18:52:44   TX-890    

@@ -1,0 +1,13 @@
+Actor,Event,Activity,Project,Module,Date,Entity_Key
+admin@qmetry.com,Create,Project QMetry Alpha created,QMetry Project Alpha,Project Management,2024-09-09 08:00:00,PROJ-001
+john.doe@example.com,Add,Test folder structure added,QMetry Project Alpha,Test Management,2024-09-09 08:30:15,FOLD-001
+jane.smith@example.com,Create,Test case TC-LOGIN-001 created,QMetry Project Alpha,Test Management,2024-09-09 09:15:22,TC-LOGIN-001
+mike.johnson@example.com,Update,Test case TC-LOGIN-001 updated with new steps,QMetry Project Alpha,Test Management,2024-09-09 10:45:33,TC-LOGIN-001
+sarah.wilson@example.com,Create,Test suite TS-SMOKE-001 created,QMetry Project Alpha,Test Planning,2024-09-09 11:20:44,TS-SMOKE-001
+david.brown@example.com,Add,Test cases added to suite TS-SMOKE-001,QMetry Project Alpha,Test Planning,2024-09-09 12:35:55,TS-SMOKE-001
+lisa.garcia@example.com,Create,Test execution TX-SMOKE-001 created,QMetry Project Alpha,Test Execution,2024-09-09 13:40:11,TX-SMOKE-001
+robert.taylor@example.com,Update,Test execution TX-SMOKE-001 marked as In Progress,QMetry Project Alpha,Test Execution,2024-09-09 14:25:22,TX-SMOKE-001
+emily.davis@example.com,Create,Defect DEF-001 logged for failed test,QMetry Project Alpha,Defect Management,2024-09-09 15:10:33,DEF-001
+michael.white@example.com,Update,Defect DEF-001 assigned to developer,QMetry Project Alpha,Defect Management,2024-09-09 15:45:44,DEF-001
+anna.lee@example.com,Update,Test execution TX-SMOKE-001 completed,QMetry Project Alpha,Test Execution,2024-09-09 16:30:55,TX-SMOKE-001
+carlos.martinez@example.com,Create,Test report generated for TX-SMOKE-001,QMetry Project Alpha,Reporting,2024-09-09 17:15:11,RPT-001

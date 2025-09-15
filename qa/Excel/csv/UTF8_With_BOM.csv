@@ -1,0 +1,5 @@
+﻿Actor,Event,Activity,Project,Module,Date,Entity_Key
+john.doe@example.com,Create,Test Case TC-001 created,QMetry Project Alpha,Test Management,2024-09-10 09:12:27,TC-001
+jane.smith@example.com,Update,Test Suite TS-005 updated,QMetry Project Beta,Test Planning,2024-09-10 10:15:33,TS-005
+mike.johnson@example.com,Delete,Requirement REQ-123 deleted,QMetry Project Gamma,Requirements,2024-09-10 11:22:41,REQ-123
+sarah.wilson@example.com,Archive,Test Execution TX-789 archived,QMetry Project Alpha,Test Execution,2024-09-10 12:30:15,TX-789
