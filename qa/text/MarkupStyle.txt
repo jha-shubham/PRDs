@@ -1,0 +1,38 @@
+<amazon-pay-features>
+  <title>Amazon Pay — Feature Summary</title>
+  <overview>
+    <p>Amazon Pay allows customers to pay on third-party sites using Amazon account payment methods and addresses.</p>
+  </overview>
+
+  <features>
+    <feature id="oneclick">
+      <name>One-click Checkout</name>
+      <desc>Leverages stored instruments for a quick checkout experience.</desc>
+    </feature>
+
+    <feature id="tokens">
+      <name>Tokenization</name>
+      <desc>Merchants handle tokens instead of raw card data reducing PCI exposure.</desc>
+    </feature>
+
+    <feature id="refunds">
+      <name>Refunds & Adjustments</name>
+      <desc>Supports partial and full refunds through API endpoints or merchant console.</desc>
+    </feature>
+
+    <feature id="reporting">
+      <name>Reporting</name>
+      <desc>Dashboard with transaction, dispute, and settlement views for merchants.</desc>
+    </feature>
+
+    <feature id="regional">
+      <name>Regional Support</name>
+      <desc>Specific features and payment methods vary by country; consult docs.</desc>
+    </feature>
+  </features>
+
+  <integration>
+    <sdk>Web SDK, Mobile SDK</sdk>
+    <api>REST endpoints for createSession, capture, refund, and webhook events</api>
+  </integration>
+</amazon-pay-features>

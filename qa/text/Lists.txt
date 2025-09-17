@@ -1,0 +1,30 @@
+Amazon Pay Features — Lists
+
+Bulleted overview:
+- Fast checkout using payment methods saved in Amazon accounts.
+- Tokenized card storage (merchant receives tokens only).
+- Support for refunds, partial refunds, and order adjustments.
+- Integration with merchant fraud detection and Amazon risk signals.
+- Support for gift cards and promotional balances where applicable.
+- Developer SDKs for web and mobile and server-side REST APIs.
+- Reporting dashboard for transactions, disputes, and settlements.
+- Multi-currency and regional payment methods depending on location.
+
+Numbered use-cases:
+1. E-commerce merchant wants to reduce cart abandonment by providing a trusted, fast checkout option.
+2. Subscription service requires recurring billing with the ability to handle payment method updates.
+3. Marketplace integrates Amazon Pay to let customers use their Amazon saved payment info across sellers.
+4. Mobile app adds Amazon Pay button to streamline in-app purchases using stored credentials.
+
+Benefits (short list):
+- Familiar brand trust increases conversion.
+- Fewer keystrokes → faster checkout and lower abandonment.
+- Secure tokenization reduces PCI scope for merchants.
+- Consolidated reporting simplifies reconciliation.
+
+Quick actions checklist:
+- Create merchant account
+- Obtain API credentials
+- Add Amazon Pay button to checkout
+- Test flow for supported regions and refund scenarios
+- Monitor reporting and reconcile payouts

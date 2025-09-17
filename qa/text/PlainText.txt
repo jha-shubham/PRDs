@@ -1,0 +1,9 @@
+Amazon Pay — Plain Text Overview
+
+Amazon Pay is a digital payment solution that enables customers to pay using information already stored in their Amazon accounts. The service is designed for speed, familiarity, and frictionless checkout. For merchants, Amazon Pay offers a familiar checkout option that leverages Amazon's trusted payments infrastructure, allowing customers to pay without entering card details on merchant sites.
+
+Key capabilities of Amazon Pay include wallet balance usage, saved card and address retrieval, single-click experiences (where available), tokenization of payment instruments for secure reuse, and support for refunds and recurring payments. For merchants, Amazon Pay integrates with fraud-detection tools, reporting dashboards that show transaction and dispute metrics, and SDKs or APIs for web and mobile integration.
+
+Customer experience features emphasize quick checkout, purchase protection, and the ability to use Amazon Gift Cards or promotional balances. Amazon Pay typically supports multiple payment instruments saved to the customer's Amazon account and adapts to local payment methods depending on region.
+
+From a technical standpoint, a merchant integrates with Amazon Pay by creating an Amazon Pay account, configuring credentials, and embedding the Amazon Pay button or API calls in their checkout flow. End-to-end testing, handling of edge cases like declined payments, and reconciliation with Amazon payouts are typical operational tasks. Overall, Amazon Pay aims to reduce friction in checkout while leveraging Amazon's existing trust and payment network.

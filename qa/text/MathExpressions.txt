@@ -1,0 +1,38 @@
+Amazon Pay — Financial and Offer Math (Linear expressions)
+
+Definitions:
+PurchaseAmount = total amount the customer pays before offers and taxes.
+Tax = PurchaseAmount * TaxRate
+OfferCashback = PurchaseAmount * CashbackRate
+NetCharge = PurchaseAmount - OfferDiscount - OfferCashback + Tax
+
+Examples:
+1) Simple cashback calculation:
+   PurchaseAmount = 1000
+   CashbackRate = 0.05
+   OfferCashback = 1000 * 0.05 = 50
+
+2) Applying promo discount and cashback:
+   PurchaseAmount = 2500
+   PromoDiscount = 200
+   CashbackRate = 0.03
+   OfferCashback = (PurchaseAmount - PromoDiscount) * 0.03
+                = (2500 - 200) * 0.03
+                = 2300 * 0.03 = 69
+   TaxRate = 0.18
+   Tax = (PurchaseAmount - PromoDiscount) * TaxRate = 2300 * 0.18 = 414
+   NetCharge = PurchaseAmount - PromoDiscount - OfferCashback + Tax
+             = 2500 - 200 - 69 + 414 = 2645
+
+3) Merchant payout example (simplified):
+   GrossSale = sum of captured amounts
+   AmazonFee = GrossSale * FeeRate
+   NetPayout = GrossSale - AmazonFee - Refunds - Chargebacks
+
+4) Recurring billing example:
+   MonthlyCharge = BaseAmount + (Usage * UnitRate)
+   AnnualEstimate = MonthlyCharge * 12
+
+Notes:
+- Use linear expressions like above to model cashback, taxes, discounts, and merchant settlements.
+- Round monetary results to the correct currency precision (e.g., 2 decimal places).

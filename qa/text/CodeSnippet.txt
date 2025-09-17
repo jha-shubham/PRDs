@@ -1,0 +1,53 @@
+// Amazon Pay — example code snippets (pseudo / illustrative)
+// NOTE: This is illustrative pseudo-code and JSON showing typical flows.
+
+// 1) Merchant server: create a checkout session
+POST /createCheckoutSession
+Headers: Authorization: Bearer MERCHANT_KEY
+Body:
+{
+  "sellerId": "YOUR_SELLER_ID",
+  "amount": 249.99,
+  "currency": "INR",
+  "orderId": "ORDER_12345",
+  "billingAddressRequired": true
+}
+
+// Response (server returns tokens to client)
+{
+  "checkoutSessionId": "CS_abc123",
+  "amazonPayButtonConfig": {
+    "sellerId": "YOUR_SELLER_ID",
+    "checkoutSessionId": "CS_abc123",
+    "signature": "signed_payload"
+  }
+}
+
+// 2) Client (web) shows Amazon Pay button with returned checkoutSessionId
+// 3) After authorization, client returns a payment token to merchant server:
+// Example token payload:
+{
+  "token": "amzn1.account-token.XXXX",
+  "billingAddress": { "name":"A User", "city":"Bengaluru", "postal":"560001" }
+}
+
+// 4) Merchant server captures payment
+POST /capturePayment
+Body:
+{
+  "checkoutSessionId":"CS_abc123",
+  "captureAmount": 249.99,
+  "currency":"INR"
+}
+
+// 5) Example refund request
+POST /refund
+Body:
+{
+  "captureId":"CP_capture_987",
+  "refundAmount": 49.99,
+  "reason":"Partial return: damaged accessory"
+}
+
+// Developers will also handle redirects, callbacks, signatures, and webhook events
+// for settlement, chargebacks, and dispute handling. Follow security and idempotency best practices.

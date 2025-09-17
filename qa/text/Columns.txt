@@ -1,0 +1,11 @@
+Feature                 Description
+----------------------  -----------------------------------------------------------
+One-click Checkout      Enables customers to check out using saved Amazon credentials for speed.
+Saved Instruments       Uses tokenized cards so merchants never store raw card data.
+Wallet & Gift Balance   Customers can apply Amazon gift card or promotional balance.
+Refunds                 Refunds and partial refunds supported via APIs and console.
+Recurring Billing       Supports subscription-style payments with specific workflows.
+Fraud & Risk            Amazon signals and merchant controls help reduce fraud loss.
+Integration Types       Web SDK, Mobile SDK, and REST API server-side integration options.
+Reporting               Dashboard exposes transactions, chargebacks, and settlement data.
+Regional Availability   Supported features vary by country and local payment options.

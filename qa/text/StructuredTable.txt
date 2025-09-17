@@ -1,0 +1,17 @@
+Feature               | Supported        | Notes
+----------------------+------------------+-----------------------------------------------------------
+One-click checkout     | Yes              | Uses saved Amazon payment & address for fast checkout
+Saved payment methods  | Yes              | Tokenized; merchant only receives tokens, not raw card data
+Gift card support      | Yes              | Amazon gift card & promotional credit may apply during checkout
+Refunds & settling     | Yes              | Refunds processed through merchant console or API calls
+Recurring payments     | Partial/support  | Subscriptions supported via specific API workflows
+Fraud detection        | Integrated       | Amazon's risk systems and device signals assist merchants
+International support  | Varies by region | Available markets differ; local payment methods may be included
+Developer SDKs/APIs    | Yes              | Web, mobile SDKs and REST APIs for integration
+Reporting & analytics  | Yes              | Dashboard for transactions, disputes, and settlement reports
+Customer protections   | Yes              | Purchase protection and dispute handling mechanisms
+
+Comparison notes:
+- Tokens: Merchant handles tokens rather than raw card numbers.
+- Payout cadence: Depends on merchant account config and region.
+- Merchant fees: Vary; check Amazon Pay merchant agreement for rates.
