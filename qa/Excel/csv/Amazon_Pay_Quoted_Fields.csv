@@ -1,0 +1,10 @@
+"ID","Feature","Description (multi-line, with commas)","Category"
+"AP-001","Wallet balance usage","Customer pays from saved Amazon balance, including ""promotional"" credits, applied first before card.
+Supports partial coverage when balance < total.","Payment"
+"AP-002","Saved card and address retrieval","Reuses cards, addresses, and shipping methods saved on Amazon, with default selection per merchant.","Payment"
+"AP-003","Tokenization","Card numbers are tokenized; ""raw PAN"" never leaves Amazon.
+Merchant receives only a token + last4 + brand.","Security"
+"AP-004","Refunds (full and partial)","Refund within 180 days of capture. Cumulative refunds MUST NOT exceed captured amount,
+otherwise the request is rejected with REFUND_EXCEEDS_CAPTURE.","Operations"
+"AP-005","Webhook delivery","Events delivered with signed payloads; on non-2xx, retry with exponential backoff for 24h.
+Gives up after 6 attempts.","Integration"

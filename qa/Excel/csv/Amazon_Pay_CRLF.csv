@@ -1,0 +1,11 @@
+ID,Feature,Category,Priority,Status
+AP-001,Wallet balance usage,Payment,P0,Released
+AP-002,Saved card and address retrieval,Payment,P0,Released
+AP-003,Single-click experience,UX,P0,Released
+AP-004,Tokenization of payment instruments,Security,P0,Released
+AP-005,Refunds (full and partial),Operations,P0,Released
+AP-006,Recurring payments,Payment,P1,Beta
+AP-007,Fraud-detection integration,Security,P0,Released
+AP-008,Reporting dashboards,Reporting,P1,Released
+AP-009,Web & mobile SDKs / APIs,Integration,P0,Released
+AP-010,Quick checkout,UX,P0,Released

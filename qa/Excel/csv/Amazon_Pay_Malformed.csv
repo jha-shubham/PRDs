@@ -1,0 +1,10 @@
+ID,Feature,Description,Category,Priority,Status,Owner
+AP-001,Wallet balance usage,Customer pays from saved balance,Payment,P0,Released,checkout-team
+AP-002,Saved card retrieval,Reuse saved cards
+AP-003,Single-click,Tap-to-pay,UX,P0,Released,ux-team,extra-1,extra-2
+AP-004,"Tokenization,Card never sent to merchant,Security,P0,Released,platform-team
+AP-005,Refunds,Within 180
+days of capture,Operations,P0,Released,ops-team
+AP-006,Recurring;payments,Billing|agreements,Payment,P1,Beta,billing-team
+
+AP-007,Fraud detection,,Security,P0,Released,trust-team,

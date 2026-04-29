@@ -1,0 +1,16 @@
+Feature,Refund days,Fee,Cap (USD),Status
+Wallet balance usage,180,0.00,10000,Released
+Saved cards,180,2.9% + $0.30,n/a,Released
+Single-click checkout,180,0.00,n/a,Released
+Tokenization,n/a,0.00,n/a,Released
+Refunds,180,FREE,captured-amount,Released
+Recurring payments,TBD,1.5%,depends,Beta
+Fraud detection,n/a,bundled,n/a,Released
+Reporting dashboards,n/a,FREE,n/a,Released
+SDKs / APIs,n/a,FREE,unlimited,Released
+Gift card balance,180,0.00,wallet-cap,Released
+SCA (EU),n/a,regulated,n/a,Released
+Multi-currency settlement,30,1.0% FX,100000,Released
+Idempotency keys,n/a,FREE,unlimited,Released
+Webhooks,n/a,FREE,24h retry,Released
+Auto-capture,n/a,0.00,n/a,Released

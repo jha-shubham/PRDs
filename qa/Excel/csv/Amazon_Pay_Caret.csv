@@ -1,0 +1,21 @@
+ID^Feature^Description^Category^Priority^Status^Owner
+AP-001^Wallet balance usage^Customer pays from saved Amazon balance^Payment^P0^Released^checkout-team
+AP-002^Saved card and address retrieval^Reuse saved cards/addresses on checkout^Payment^P0^Released^checkout-team
+AP-003^Single-click experience^One-tap checkout for returning customers^UX^P0^Released^ux-team
+AP-004^Tokenization of payment instruments^Card never sent to merchant; token only^Security^P0^Released^platform-team
+AP-005^Refunds (full and partial)^Refund within 180 days of capture^Operations^P0^Released^ops-team
+AP-006^Recurring payments^Billing agreements for subscriptions^Payment^P1^Beta^billing-team
+AP-007^Fraud-detection integration^Risk-scoring + 3DS step-up where required^Security^P0^Released^trust-team
+AP-008^Reporting dashboards^Auth/capture/refund/dispute KPIs per merchant^Reporting^P1^Released^reporting-team
+AP-009^Web & mobile SDKs / APIs^JS / iOS / Android / REST clients^Integration^P0^Released^sdk-team
+AP-010^Quick checkout^Sub-5s p95 authorize() latency^UX^P0^Released^ux-team
+AP-011^Purchase protection^A-to-z guarantee within 14 days^Trust^P1^Released^trust-team
+AP-012^Amazon Gift Cards / promotional balances^Apply gift card balance before charge^Payment^P2^Released^checkout-team
+AP-013^Multiple saved payment instruments^Customer picks default per merchant^UX^P1^Released^ux-team
+AP-014^Locale-aware payment methods^Per-region payment options (UPI/SEPA/etc.)^Localization^P1^Released^i18n-team
+AP-015^Webhook delivery^Retry up to 24h with exponential backoff^Integration^P0^Released^platform-team
+AP-016^Idempotency keys^Safe retries on auth/capture^Reliability^P1^Released^platform-team
+AP-017^Strong Customer Authentication (SCA)^3DS/biometric for EU regulated regions^Security^P0^Released^trust-team
+AP-018^Dispute resolution^Chargeback/dispute lifecycle^Operations^P1^Released^ops-team
+AP-019^Multi-currency settlement^USD/EUR/GBP/JPY/INR + FX^Finance^P1^Released^finance-team
+AP-020^Auto-capture on authorization^Skip manual capture step^Operations^P2^Released^ops-team
