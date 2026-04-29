@@ -1,0 +1,47 @@
+Amazon Pay — Behaviour Specification (Gherkin format)
+
+Feature: Amazon Pay checkout on a merchant site
+  As a customer with an Amazon account
+  I want to pay using my saved Amazon credentials
+  So that I can complete checkout without re-entering card details
+
+  Scenario: Successful one-click checkout with default payment instrument
+    Given I am signed in to my Amazon account on the merchant site
+    And I have a default saved card on file
+    When I click the Amazon Pay button at checkout
+    And I confirm the order on the Amazon Pay consent screen
+    Then my order should be placed
+    And I should receive an order confirmation email within 30 seconds
+    And the merchant dashboard should show the transaction as Authorized
+
+  Scenario: Checkout with an alternate saved payment instrument
+    Given I am on the Amazon Pay consent screen
+    And I have at least two saved payment instruments
+    When I select a non-default card from the list
+    And I tap "Place order"
+    Then the order should be charged to the selected card
+    And the consent screen should remember this selection for the session
+
+Feature: Refunds and partial refunds
+  As a merchant
+  I want to issue full or partial refunds via Amazon Pay
+  So that disputes can be resolved without manual reconciliation
+
+  Scenario: Full refund within the refund window
+    Given a captured Amazon Pay transaction less than 180 days old
+    When the merchant initiates a full refund from the dashboard
+    Then the customer should be refunded to the original payment instrument
+    And the transaction status should change to Refunded
+
+  Scenario: Partial refund exceeding the captured amount
+    Given a captured transaction of $50
+    When the merchant attempts a refund of $60
+    Then the system should reject the refund with error REFUND_EXCEEDS_CAPTURE
+    And no funds should move
+
+Feature: Recurring payments
+  Scenario: Customer cancels an active subscription
+    Given a customer has an active Amazon Pay subscription
+    When the customer cancels via the Amazon Pay account portal
+    Then no further charges should be attempted after the current billing period
+    And the merchant should receive a webhook event "billing_agreement.canceled"

@@ -1,0 +1,31 @@
+Amazon Pay — Customer & Merchant FAQ
+
+Q1: What is Amazon Pay?
+A1: Amazon Pay is a digital wallet and checkout service that lets customers pay on third-party merchant sites using the payment methods and addresses already saved in their Amazon account, without re-entering card details.
+
+Q2: Does the merchant ever see my card number?
+A2: No. Card details are tokenized by Amazon. The merchant only receives a payment token, the brand, and the last four digits for display purposes.
+
+Q3: Can I use my Amazon Gift Card balance to pay on a merchant site?
+A3: In most regions, yes. If a gift card balance is available it is applied first, and the remaining amount is charged to the selected payment instrument.
+
+Q4: What happens if my payment fails?
+A4: The Amazon Pay consent screen surfaces a localized error message and lets you choose a different saved instrument. Three consecutive failures will lock the session for 5 minutes.
+
+Q5: How do I get a refund?
+A5: Contact the merchant. The merchant initiates the refund through their Amazon Pay dashboard, and the funds are returned to the original payment instrument within 5–10 business days.
+
+Q6: Can I dispute a transaction directly with Amazon?
+A6: Yes. You can raise an A-to-z Guarantee claim from your Amazon Pay account if the merchant does not respond within 14 days.
+
+Q7 (Merchant): How do I integrate Amazon Pay?
+A7: Create an Amazon Pay merchant account, generate API credentials, install the SDK for your platform (JS, iOS, Android, or server-side REST), and embed the Amazon Pay button on your checkout page.
+
+Q8 (Merchant): What is the settlement timeline?
+A8: Settled funds are deposited to the merchant bank account on a T+3 schedule by default. Higher-volume merchants can request T+1.
+
+Q9 (Merchant): How are recurring payments handled?
+A9: Recurring payments use a "billing agreement" object created at the customer's first checkout. Subsequent charges reference the agreement and do not require customer re-consent unless the amount exceeds the agreed cap.
+
+Q10 (Merchant): Where can I see transaction analytics?
+A10: The Amazon Pay merchant dashboard provides daily, weekly, and monthly views of authorizations, captures, refunds, dispute rates, and chargeback ratios.

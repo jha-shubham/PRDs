@@ -1,0 +1,40 @@
+Amazon Pay™ — Specification with Special & Symbolic Characters
+
+§ 1. Trademarks & Notices
+Amazon®, Amazon Pay™, and the Amazon Pay button design are © Amazon.com, Inc. or its affiliates. Use of the marks is governed by the Brand Guidelines (¶ 4.2). The "1-Click" experience is covered by U.S. Patent № 5,960,411 (where applicable).
+
+§ 2. Pricing & Limits
+• Per-transaction fee: 2.9 % + $0.30 (USD) — international cards may add ±0.5 %.
+• Refund window: ≤ 180 days from capture. Partial refunds permitted as long as Σ(refunds) ≤ captured amount.
+• Settlement timeline: T+3 by default; high-volume merchants may request T+1.
+• FX rate spread: ≈ 1 % above mid-market for non-USD captures.
+
+§ 3. SLAs
+• Authorization latency p95 ≤ 5 s; p99 ≤ 8 s.
+• Availability ≥ 99.95 % monthly.
+• Webhook retry: ≤ 6 attempts, exponentially spaced, max delay ≈ 4 h.
+
+§ 4. Required Headers
+All API calls SHOULD include:
+  → x-amz-pay-region:        e.g. "us", "eu", "jp"
+  → x-amz-pay-idempotency-key: a UUID per logical request
+  → x-amz-pay-date:           ISO-8601 with offset ±hh:mm
+
+§ 5. Mathematical Constraints
+The captured amount A must satisfy:
+  0 < A ≤ A_authorized
+  Σ R_i  ≤  A          (sum of refunds Σ over i)
+  ΔA = A − Σ R_i ≥ 0   (net captured ≥ 0 at all times)
+
+§ 6. Currency Symbols Supported
+Direct: $ USD · € EUR · £ GBP · ¥ JPY · ¥ CNY · ₹ INR · ₩ KRW · ₽ RUB · ₺ TRY · ₪ ILS · ₱ PHP · ₫ VND · ₦ NGN · ฿ THB · ₴ UAH · ₡ CRC · R$ BRL · A$ AUD · C$ CAD
+
+§ 7. Punctuation & Formatting in Locale
+• Decimal separator may be "." or "," depending on locale (e.g. "1,234.56" en-US vs. "1.234,56" de-DE).
+• Quotation marks: « … », „ … ", " … ", ' … ' — all permitted in display strings.
+• Em-dash (—), en-dash (–), and minus (−) are distinct characters; the API expects the ASCII hyphen-minus (-) in numeric fields.
+
+§ 8. Caveats
+†  Subject to regional regulatory approval.
+‡  Available in the merchant dashboard ≥ 24 h after enablement.
+©  All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement.

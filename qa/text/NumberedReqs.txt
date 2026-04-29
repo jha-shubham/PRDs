@@ -1,0 +1,39 @@
+Amazon Pay — Numbered Requirements Specification
+
+1. Authentication and Session
+
+REQ-AUTH-001: The system SHALL allow customers to sign in to Amazon Pay using their existing Amazon account credentials.
+REQ-AUTH-002: The system SHALL maintain a Pay session for at most 30 minutes of inactivity, after which a re-authentication is required.
+REQ-AUTH-003: The system SHOULD support biometric re-authentication on supported mobile devices.
+REQ-AUTH-004: The system MUST NOT expose the Amazon password to the merchant site under any circumstance.
+
+2. Payment Instruments
+
+REQ-PI-001: The system SHALL allow customers to select any saved payment instrument associated with their Amazon account.
+REQ-PI-002: The system SHALL display the last four digits and brand of each saved card; full PAN MUST never be returned.
+REQ-PI-003: The system SHOULD allow the customer to mark a default payment instrument per merchant.
+REQ-PI-004: The system MUST tokenize all card-on-file references before transmission to the merchant.
+
+3. Checkout Flow
+
+REQ-CHK-001: The merchant integration SHALL render an Amazon Pay button conforming to the brand guidelines (height 40-66px).
+REQ-CHK-002: On click, the system SHALL open the Amazon Pay consent screen in a hosted iframe or redirect.
+REQ-CHK-003: The consent screen SHALL display merchant name, total amount, currency, and selected instrument.
+REQ-CHK-004: The system SHALL return a payment authorization within 5 seconds at the 95th percentile.
+
+4. Refunds
+
+REQ-REF-001: The system SHALL support full refunds within 180 days of capture.
+REQ-REF-002: The system SHALL support partial refunds; the cumulative refund amount MUST NOT exceed the captured amount.
+REQ-REF-003: Refunds SHALL be issued to the original payment instrument unless the original instrument is no longer valid.
+
+5. Webhooks and Reconciliation
+
+REQ-HOOK-001: The system SHALL emit webhook events for: payment.authorized, payment.captured, payment.refunded, billing_agreement.created, billing_agreement.canceled.
+REQ-HOOK-002: Webhook deliveries SHALL retry with exponential backoff for up to 24 hours on non-2xx responses.
+REQ-HOOK-003: Each webhook payload MUST include a signature header for verification.
+
+6. Error Handling
+
+REQ-ERR-001: All API errors SHALL return a stable error_code, a human-readable message, and a request_id for support correlation.
+REQ-ERR-002: The system MUST NOT leak personally identifiable information in error responses.

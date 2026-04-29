@@ -1,0 +1,46 @@
+Amazon Pay — Product Overview 🛒💳
+
+🎯 Goal
+Make checkout on partner sites as fast and trusted as buying on Amazon itself. ✨
+
+👤 Who is it for?
+- 🛍️ Returning Amazon customers who want frictionless checkout on third-party stores
+- 🏪 Merchants who want higher conversion and Amazon-grade trust
+- 🧑‍💻 Developers integrating payments into web and mobile apps
+
+🚀 Key Features
+- ✅ One-click checkout with saved Amazon address & card
+- 🔒 Tokenized payments — merchant never sees the card number
+- 🔁 Recurring payments via billing agreements
+- 💸 Refunds (full and partial) up to 180 days post-capture
+- 🌍 Localized payment methods per region
+- 📊 Merchant dashboard with auth/capture/refund/dispute metrics
+- 🎁 Amazon Gift Card balance applied automatically when available
+
+📲 Customer Flow
+1. 👀 Customer sees the Amazon Pay button on the merchant cart
+2. 👆 Customer taps it
+3. 🔐 Amazon shows the consent screen with merchant name + amount
+4. ✅ Customer confirms
+5. 📧 Order confirmation lands in inbox
+6. 🎉 Done!
+
+⚠️ Error Handling
+- ❌ Card declined → show localized message, offer retry with another instrument
+- 🚫 Three failures in a row → 5-minute lockout
+- 🛠️ Webhook delivery failures → retry with exponential backoff for 24h ⏱️
+
+🔐 Security & Compliance
+- 🛡️ PCI DSS scope reduction for the merchant
+- 🆔 Strong Customer Authentication (SCA) where required (EU 🇪🇺)
+- 🔏 Signed webhooks; merchant MUST verify signature before acting
+
+📈 Success Metrics
+- ⬆️ +15% checkout conversion vs. card form
+- ⬇️ -25% cart abandonment on mobile 📱
+- 🕐 < 5s p95 authorization latency
+
+🚧 Out of Scope (for v1)
+- 🏦 Bank-direct (ACH) settlement to customers
+- 🪙 Crypto wallets
+- 🧾 In-store / POS terminals

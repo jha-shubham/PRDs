@@ -1,0 +1,70 @@
+Amazon Pay — Integration Spec with Embedded Examples
+
+Overview
+The Amazon Pay checkout API accepts a JSON request and returns a JSON response. Merchants integrate by creating a checkout session, redirecting the buyer, and then completing the session after consent.
+
+1. Create Checkout Session
+
+The merchant POSTs to /v2/checkoutSessions with a body like:
+
+{
+  "webCheckoutDetails": {
+    "checkoutReviewReturnUrl": "https://merchant.example.com/review",
+    "checkoutResultReturnUrl":  "https://merchant.example.com/return"
+  },
+  "storeId": "amzn1.application-oa2-client.xxxxxxxx",
+  "scopes": ["name", "email", "phoneNumber", "billingAddress"],
+  "paymentDetails": {
+    "paymentIntent": "AuthorizeWithCapture",
+    "chargeAmount": { "amount": "49.99", "currencyCode": "USD" }
+  }
+}
+
+A successful response looks like:
+
+{
+  "checkoutSessionId": "abcd1234-5678-90ef-abcd-ef1234567890",
+  "statusDetails": { "state": "Open" },
+  "expiresOn": "2025-01-15T18:00:00Z"
+}
+
+2. Configuration (YAML)
+
+Merchants typically store API config as:
+
+amazon_pay:
+  region: us
+  store_id: amzn1.application-oa2-client.xxxxxxxx
+  public_key_id: AE...XYZ
+  sandbox: false
+  webhook:
+    url: https://merchant.example.com/webhooks/amazon-pay
+    timeout_ms: 5000
+    retry:
+      max_attempts: 6
+      backoff: exponential
+
+3. Webhook Payload
+
+The merchant endpoint receives signed events:
+
+{
+  "eventType": "PAYMENT_CAPTURED",
+  "chargeId": "S03-1234567-1234567-C001",
+  "amount":  { "amount": "49.99", "currencyCode": "USD" },
+  "occurredAt": "2025-01-15T17:42:11Z",
+  "signature": "v1=8a4f..."
+}
+
+4. Error Response Shape
+
+All 4xx and 5xx responses follow:
+
+{
+  "errorCode": "InvalidParameterValue",
+  "message":  "The chargeAmount.currencyCode is not supported in this region.",
+  "requestId": "abcdef12-3456-7890-abcd-ef0123456789"
+}
+
+Operational Notes
+Merchants are expected to validate the signature on every webhook before acting on the payload, and to be idempotent on the chargeId field.

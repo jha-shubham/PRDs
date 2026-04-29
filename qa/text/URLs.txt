@@ -1,0 +1,35 @@
+Amazon Pay — Reference Document with URLs
+
+Overview
+Amazon Pay is a digital wallet checkout service. Full product page: https://pay.amazon.com . Developer documentation lives at https://developer.amazon.com/docs/amazon-pay-checkout/ and the API reference is at https://developer.amazon.com/docs/amazon-pay-api-v2/ .
+
+Onboarding
+Merchants register at https://sellercentral.amazon.com/ap/signin to obtain credentials. Sandbox dashboard: https://payments-sandbox.amazon.com . Production dashboard: https://payments.amazon.com .
+
+SDKs
+- JavaScript SDK — https://m.media-amazon.com/images/G/01/EnglishCommonImages/AmazonPay/CheckoutV2/amazon.Pay.js
+- Server SDKs — https://github.com/amzn/amazon-pay-api-sdk-nodejs , https://github.com/amzn/amazon-pay-api-sdk-python , https://github.com/amzn/amazon-pay-api-sdk-java
+- iOS / Android — https://developer.amazon.com/docs/amazon-pay-checkout/mobile.html
+
+Brand Assets
+Button images: https://pay.amazon.com/help/external/201210370 . Brand guidelines PDF: https://m.media-amazon.com/images/G/01/AmazonPay/Brand_Guidelines.pdf .
+
+Webhooks
+Configure your endpoint at https://sellercentral.amazon.com/payments/dashboard . Signature verification reference: https://developer.amazon.com/docs/amazon-pay-api-v2/signing-requests.html . Test deliveries from the sandbox: https://payments-sandbox.amazon.com/dashboard/notifications .
+
+Compliance
+PCI DSS overview: https://www.pcisecuritystandards.org/document_library . SCA / PSD2 guidance: https://developer.amazon.com/docs/amazon-pay-checkout/sca.html .
+
+Support
+- Status page: https://status.pay.amazon.com
+- Developer forum: https://forums.developer.amazon.com/spaces/40/index.html
+- Direct support: https://pay.amazon.com/help/contact
+
+Footnote-style references
+[1] Amazon Pay product page — https://pay.amazon.com
+[2] API Reference v2 — https://developer.amazon.com/docs/amazon-pay-api-v2/
+[3] Webhook signing — https://developer.amazon.com/docs/amazon-pay-api-v2/signing-requests.html
+[4] Status page — https://status.pay.amazon.com
+
+Mailto / Tel
+For partnership inquiries, email amazonpay-bd@amazon.com . For urgent merchant support call +1-866-216-1075 .

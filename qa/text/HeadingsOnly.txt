@@ -1,0 +1,46 @@
+Amazon Pay — Outline
+
+1. Overview
+
+2. Goals
+   2.1 Reduce checkout friction
+   2.2 Reuse Amazon trust
+   2.3 Increase merchant conversion
+
+3. Non-Goals
+
+4. Personas
+   4.1 Returning Amazon customer
+   4.2 First-time customer
+   4.3 Merchant integrator
+   4.4 Operations / reconciliation user
+
+5. User Flows
+   5.1 Sign-in
+   5.2 Consent
+   5.3 Authorize
+   5.4 Capture
+   5.5 Refund
+   5.6 Dispute
+
+6. Functional Requirements
+   6.1 Authentication
+   6.2 Payment instruments
+   6.3 Tokenization
+   6.4 Webhooks
+   6.5 Recurring
+   6.6 Reporting
+
+7. Non-Functional Requirements
+   7.1 Latency
+   7.2 Availability
+   7.3 Compliance
+   7.4 Localization
+
+8. Risks
+
+9. Open Questions
+
+10. Out of Scope
+
+11. Milestones

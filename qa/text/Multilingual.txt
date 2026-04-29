@@ -1,0 +1,24 @@
+Amazon Pay — Multilingual Overview
+
+[English]
+Amazon Pay lets shoppers check out on partner merchant sites using the addresses and payment methods saved in their Amazon account. The merchant integrates a button and an API; Amazon handles authentication, tokenization, and dispute resolution. Refunds are supported within 180 days, and recurring payments are handled via billing agreements.
+
+[हिन्दी / Hindi]
+अमेज़न पे ग्राहकों को साझेदार मर्चेंट साइटों पर अपने अमेज़न खाते में सहेजे गए पते और भुगतान विधियों का उपयोग करके चेकआउट करने देता है। मर्चेंट एक बटन और एक API एकीकृत करता है; प्रमाणीकरण, टोकनकरण और विवाद समाधान अमेज़न संभालता है। 180 दिनों के भीतर रिफ़ंड समर्थित हैं, और आवर्ती भुगतान बिलिंग एग्रीमेंट के माध्यम से होते हैं।
+
+[中文 / Chinese]
+亚马逊支付（Amazon Pay）让购物者使用其亚马逊账户中保存的地址和付款方式，在合作商户网站上完成结账。商户只需集成按钮和 API；身份验证、令牌化和争议处理由亚马逊负责。支持在 180 天内退款，定期付款通过"账单协议"处理。
+
+[العربية / Arabic]
+يتيح "أمازون باي" للمتسوقين إتمام الدفع على مواقع التجار الشركاء باستخدام العناوين وطرق الدفع المحفوظة في حساب أمازون الخاص بهم. يقوم التاجر بدمج زر وواجهة برمجية فقط؛ بينما تتولى أمازون عمليات المصادقة والترميز وحل النزاعات. تُدعَم عمليات الاسترداد خلال 180 يومًا، وتُعالَج المدفوعات المتكررة عبر اتفاقيات الفوترة.
+
+[Español / Spanish]
+Amazon Pay permite a los compradores finalizar la compra en sitios de comerciantes asociados utilizando las direcciones y los métodos de pago guardados en su cuenta de Amazon. El comerciante integra un botón y una API; Amazon se encarga de la autenticación, la tokenización y la resolución de disputas. Se admiten reembolsos dentro de los 180 días y los pagos recurrentes se gestionan mediante acuerdos de facturación.
+
+[日本語 / Japanese]
+Amazon Pay は、買い物客が Amazon アカウントに保存された住所と支払い方法を使って、パートナー加盟店サイトで決済できるサービスです。加盟店はボタンと API を統合するだけで、認証・トークン化・紛争処理は Amazon 側で行われます。返金は 180 日以内に対応し、定期決済は「ビリングアグリーメント」で処理されます。
+
+[Common — across all locales]
+- p95 latency: < 5s
+- refund window: 180 days
+- webhook retry: 24h, exponential backoff
